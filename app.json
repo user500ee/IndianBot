@@ -36,7 +36,7 @@
     },
     "CUSTOM_PMPERMIT": {
       "description": "Fill your Full name or Username.",
-      "value": ""
+      "value": "",
       "required": false
     },
     "PLUGIN_CHANNEL": {
