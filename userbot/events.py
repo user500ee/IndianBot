@@ -15,7 +15,7 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER
+from userbot import bot, BOTLOG_CHATID, PLUGIN_CHANNEL
 
 
 def register(**args):
@@ -52,7 +52,7 @@ def register(**args):
 
     def decorator(func):
         async def wrapper(check):
-            if not LOGSPAMMER:
+            if not PLUGIN_CHANNEL:
                 send_to = check.chat_id
             else:
                 send_to = BOTLOG_CHATID
@@ -67,9 +67,7 @@ def register(**args):
             try:
                 await func(check)
 
-            # Thanks to @kandnub for this HACK.
-            # Raise StopPropagation to Raise StopPropagation
-            # This needed for AFK to working properly
+            # @pureindialover 's fix
 
             except events.StopPropagation:
                 raise events.StopPropagation
@@ -86,7 +84,7 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**USERBOT ERROR REPORT**\n"
-                    link = "[PaperplaneExtended Support Chat](https://t.me/PaperplaneExtendedSupport)"
+                    link = "[IndianBot Support Chat](https://t.me/IndianBot_Official)"
                     text += "If you want to, you can report it"
                     text += f"- just forward this message to {link}.\n"
                     text += "Nothing is logged except the fact of error and date\n"
@@ -127,7 +125,7 @@ def register(**args):
                     file.write(ftext)
                     file.close()
 
-                    if LOGSPAMMER:
+                    if PLUGIN_CHANNEL:
                         await check.client.respond(
                             "`Sorry, my userbot has crashed.\
                         \nThe error logs are stored in the userbot's log chat.`"
