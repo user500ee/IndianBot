@@ -18,7 +18,7 @@ USER_BOT_NO_WARN = ("[──▄█▀█▄─────────██ \n�
                     "**I Am Made By A Pro, I Found Ur Way Through "
                     f"{DEFAULTUSER}'s inbox**.\n\n"
                     f"{MSG_CUSTOM}"
-                    "** So Send `/start` To Start A Valid Conversation.**")
+                    "\n\n** So Send `/start` To Start A Valid Conversation.**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
