@@ -35,8 +35,8 @@
       "value": ""
     },
     "CUSTOM_PMPERMIT": {
-      "description": "Fill your Full name or Username.",
-      "value": "",
+      "description": "change it if u want custom pmpermit msg",
+      "value": "`🔶I Am :` **☣HOT🔥**\n\n**This Is Regarded As Illegal And A Crime😬**\n\n",
       "required": false
     },
     "PLUGIN_CHANNEL": {
