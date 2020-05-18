@@ -11,7 +11,7 @@ if ENV:
         # Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture
         SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
         # Send .get_id in any group to fill this value.
-
+        AFK_LOG = int(os.environ.get("AFK_LOG", False))
         # This is required for the plugins involving the file system.
         TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
         # This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
@@ -104,7 +104,7 @@ if ENV:
         MONGO_URI = os.environ.get("MONGO_URI", None)
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
-        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
+        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", False))
 else:
     class Config(object):
         DB_URI = None
