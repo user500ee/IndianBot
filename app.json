@@ -36,7 +36,7 @@
     },
     "CUSTOM_PMPERMIT": {
       "description": "change it if u want custom pmpermit msg",
-      "value": "`🔶I Am :` **☣HOT🔥**\n\n**This Is Regarded As Illegal And A Crime😬**\n\n",
+      "value": "",
       "required": false
     },
     "PLUGIN_CHANNEL": {
