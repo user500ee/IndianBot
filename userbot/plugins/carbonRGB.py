@@ -92,7 +92,7 @@ async def carbon_api(e):
    #sleep(5)
    await e.edit("⬛⬛⬛⬜⬜")
    #driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
-   #sleep(5) #Waiting for downloading
+   sleep(2) #Waiting for downloading
 
    await e.edit("⬛⬛⬛⬛⬛")
    file = './carbon.png'
@@ -100,7 +100,7 @@ async def carbon_api(e):
    await e.client.send_file(
          e.chat_id,
          file,
-         caption="Carbonised by [IndianBot](https://t.me/IndianArMyGiveaway)",
+         caption="Carbonised by [IndianBot](https://t.me/IndianBot_Official)",
          force_document=False,
          reply_to=e.message.reply_to_msg_id,
          )
