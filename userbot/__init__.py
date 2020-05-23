@@ -51,7 +51,7 @@ if bool(ENV):
     # Check if the config was edited by using the already used variable.
     # Basically, its the 'virginity check' for the config file ;)
     CONFIG_CHECK = os.environ.get(
-        "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
+        "", None)
 
     if CONFIG_CHECK:
         LOGS.info(
@@ -80,10 +80,10 @@ if bool(ENV):
     DB_URI = os.environ.get("DATABASE_URL", None)
 
     # OCR API key
-    OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
+    OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", "1354507")
 
     # remove.bg API key
-    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
+    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "45d9cd991dab5f5f49bc9f83d5aaa4ea")
 
     # Chrome Driver and Headless Google Chrome Binaries
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
@@ -165,5 +165,4 @@ LASTMSG = {}
 CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
-
 
