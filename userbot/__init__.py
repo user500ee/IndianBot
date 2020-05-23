@@ -103,6 +103,7 @@ if bool(ENV):
     # Default .alive name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
     CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
+    CUSTOM_AFK = os.environ.get("CUSTOM_AFK", None)
     AUTONAME = os.environ.get("AUTONAME", None)
 
     # Time & Date - Country and Time Zone
