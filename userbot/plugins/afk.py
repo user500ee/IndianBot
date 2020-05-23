@@ -5,6 +5,7 @@ import datetime
 from telethon import events
 from telethon.tl import functions, types
 from userbot.utils import admin_cmd
+from userbot import CUSTOM_AFK
 
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602
@@ -121,8 +122,11 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"My Master Has Been Gone For {afk_since}\nWhere He Is: Tereko kyu batau " + \
-            f"\n\n__ I'll back in a few hours__\n**REASON**: {reason}" \
+     
+CUSTOM_AFK_MSG = str(CUSTOM_AFK) if CUSTOM_AFK else "My Master Has Been Gone For **sometime**\nWhere He Is: Tereko kyu batau \n\n__ I'll back in a few hours__\n"
+        
+        message_to_reply = f"{CUSTOM_AFK_MSG}" + \
+            f"**REASON**: {reason}" \
             if reason \
             else f"**Important Notice**\n\n[This User Is Ded Forever...](https://telegra.ph//file/a53fa950ff31781d5930a.jpg) "
         msg = await event.reply(message_to_reply)
